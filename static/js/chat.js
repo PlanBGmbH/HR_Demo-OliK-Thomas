@@ -1,5 +1,5 @@
-const azureSpeechKey = '43fc3c57232c449d9229448e12bbb1db';
-const azureSpeechRegion = 'westeurope';
+const azureSpeechKey = 'BVlC7WVmt2J9qvJf1FRdky228OYaXS1THb9d9UjBjNjBdhqK3t4VJQQJ99BBACfhMk5XJ3w3AAAYACOGcYbI';
+const azureSpeechRegion = 'swedencentral';
 const speechConfig = SpeechSDK.SpeechConfig.fromSubscription(azureSpeechKey, azureSpeechRegion);
 // Elements selection
 const promptTextarea = document.getElementById('promptTextarea');

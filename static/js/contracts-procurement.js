@@ -1,5 +1,5 @@
-const azureSpeechKey = '43fc3c57232c449d9229448e12bbb1db';
-const azureSpeechRegion = 'westeurope';
+const azureSpeechKey = 'BVlC7WVmt2J9qvJf1FRdky228OYaXS1THb9d9UjBjNjBdhqK3t4VJQQJ99BBACfhMk5XJ3w3AAAYACOGcYbI';
+const azureSpeechRegion = 'swedencentral';
 const speechConfig = SpeechSDK.SpeechConfig.fromSubscription(azureSpeechKey, azureSpeechRegion);
 // Elements selection
 const promptTextarea = document.getElementById('promptTextarea');
@@ -485,7 +485,7 @@ function displayInitialPrompts(prompts) {
   initialPromptContainer.classList.remove('d-none');
 }
 
-fetchInitialPrompts();
+// fetchInitialPrompts();
 
 function fetchRecommendedPrompts(resultText) {
   fetch('/api/recommended-prompts', {
@@ -597,7 +597,7 @@ function proccessPrompt() {
     document.getElementById('analyzingMessage').remove(); // Remove the "Analyzing" message
     let textResult = data.text_results;
     addResponse(textResult || 'No result returned.', selectedLanguagePrompt); // Add actual response
-    fetchRecommendedPrompts(textResult); 
+    // fetchRecommendedPrompts(textResult); 
   })
   .catch(error => {
     console.error('Error analyzing prompt:', error);
