@@ -1,0 +1,475 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+.menu-container {
+    flex: 4;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-item {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 30px; 
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Heading Styles */
+h1, h2 {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    color: #64748B;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* File Upload Section */
+.upload-section {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.upload-section input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Prompt Section */
+.prompt-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#prompt-input {
+    flex-grow: 1;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.left-button {
+    margin-right: 10px;
+}
+
+.right-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.right-buttons button {
+    margin-left: 10px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button img {
+    width: 24px;
+    height: 24px;
+}
+
+#upload-btn, #mic-button, #analyze-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#upload-btn img, #mic-button img, #analyze-button img {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Result and History Sections */
+#result-section, #history-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.history-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* List Styles */
+ul, ol {
+    margin: 0;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    list-style: disc; /* Ensure bullet points are shown */
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+ol {
+    list-style-type: decimal;
+  }
+  
+li {
+    margin-bottom: 5px;
+  }
+
+/* Table Styles */
+.styled-table, table {
+    width: 100%;
+    border-collapse: collapse; /* Change from collapse to separate for better spacing */
+    margin: 25px 0;
+    font-size: 16px; /* Slightly reduce font size for better readability */
+    text-align: left;
+}
+
+table thead {
+    background-color: #f0f0f0; /* Gray header background */
+}
+
+.styled-table th, .styled-table td, table th, table td {
+    padding: 8px; /* Increase padding */
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+}
+
+td {
+    text-align: left;
+}
+
+th, td {
+    padding: 12px;
+}
+
+.styled-table thead tr, table thead tr {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.styled-table tbody tr:nth-of-type(even), table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:hover, table tbody tr:hover {
+    background-color: #e1e1e1; /* Slightly darker hover for better feedback */
+}
+
+table tr:nth-child(odd) {
+    background-color: white;  /* Ensure all rows have the same background */
+}
+
+table tr:nth-child(even) {
+    background-color: white;  /* Ensure all rows have the same background */
+}
+
+
+/* RTL specific styles */
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.rtl ul {
+    direction: rtl;
+    text-align: right;
+    list-style-position: inside;
+}
+
+.rtl table {
+    direction: rtl;
+}
+
+.rtl th, .rtl td {
+    text-align: right;
+}
+
+/* Default LTR styles */
+.ltr {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    #prompt-section {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px;
+    }
+
+    #prompt-input {
+        width: 100%; /* Take full width on small screens */
+        margin-bottom: 10px;
+    }
+
+    #upload-btn, #mic-button, #analyze-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Additional Spacing Adjustments */
+.upload-section, .prompt-section, #result-section, #history-section {
+    margin-left: 20px; /* Adds space on the left side */
+    margin-right: 20px; /* Adds space on the right side */
+}
+
+.container {
+    padding-left: 40px; /* Increase left padding */
+    padding-right: 40px; /* Increase right padding */
+}
+
+#result-section, #history-section {
+    padding-left: 30px; /* Adjust padding for better spacing */
+    padding-right: 30px; 
+}
+
+.result-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox container for image and description */
+.result-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;  /* Optional: Add border for better visibility */
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 800px;  /* Adjust as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow */
+}
+
+/* Styling for the image in the result */
+.result-item img {
+    width: 150px;  /* Control the width */
+    height: auto;
+    margin-right: 20px;  /* Space between image and text */
+    border-radius: 8px;  /* Optional: Rounded corners */
+}
+
+/* Styling for the description text */
+.result-item .description-text {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+    text-align: left;  /* Ensure text is aligned left */
+}
+
+/* Ensure that images are responsive and do not overflow their container */
+.responsive-image {
+    max-width: 100%;       /* Ensure image doesn't exceed container width */
+    height: auto;          /* Maintain aspect ratio */
+    display: block;        /* Block-level element to avoid text wrapping around */
+    margin: 0 auto;        /* Center the image */
+    border-radius: 8px;    /* Add rounded corners for a cleaner look (optional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visual appearance */
+    max-height: 500px;     /* Maximum height to control how tall the image can get */
+}
+
+/* Example for a flexible gallery layout */
+.result-wrapper {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: left;     /* Center items */
+    gap: 20px;               /* Add space between images and descriptions */
+}
+
+#analysis-result {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    max-height: 800px;
+    overflow-y: scroll;
+}
+
+/* Container for images */
+#imageGallery {
+    width: 100%;           /* Full width */
+    max-width: 700px;      /* Set a maximum width for larger screens */
+    margin: 0 auto;        /* Center the container */
+    padding: 20px;         /* Add padding around the gallery */
+    display: flex;         /* Use flexbox for layout */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center;   /* Center the images vertically */
+    flex-wrap: wrap;       /* Allow images to wrap */
+}
+
+.upload-icon {
+    cursor: pointer;
+}
+
+.upload-trigger {
+    max-width: 40px;
+    max-height: 40px;
+    cursor: pointer;
+}
+
+#uploaded-files {
+    margin-top: 20px;
+}
+
+#uploaded-files div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#uploaded-files img {
+    margin-right: 10px;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+#prompt-section .left-button img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.right-buttons img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.language-selection {
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.loading-indicator .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #3498db;
+    display: inline-block;
+    animation: loading-dots 1.2s infinite ease-in-out both;
+}
+
+.loading-indicator .dot:nth-child(1) {
+    animation-delay: -0.24s;
+}
+
+.loading-indicator .dot:nth-child(2) {
+    animation-delay: -0.12s;
+}
+
+.loading-indicator .dot:nth-child(3) {
+    animation-delay: 0;
+}
+
+@keyframes loading-dots {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.chat-message-prompt {
+    text-align: right;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

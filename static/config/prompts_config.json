@@ -1,0 +1,80 @@
+{
+    "prompt_buttons": [
+        {
+          "title": "Score Tender",
+          "prompt": "Score this tender using the tender scoring matrix standards document against all of the vendor proposals and evaluate it against the RFP. Use the exact weights and format specified in the tender scoring matrix standards document provided. Your output should include the following: 1. **Scoring Table**: Please provide a scoring table in this format: Criteria | Weight | Vendor 1 Score | Vendor 2 Score | Vendor 3 Score. Technical Compliance | 40% | | | . Cost | 30% | | | . Experience | 20% | | | . Risk Management | 10% | | | . Total Score | | | | . 2. **Detailed Scoring Rationale**: For each vendor, provide a detailed explanation of why they received their scores. In this rationale, highlight any anomalies or extremes that stand out (such as a vendor receiving significantly higher or lower scores in one category compared to others). 3. **Final Vendor Selection and Rationale**: Based on the total scores and the detailed rationale, explain which vendor is selected and provide a clear justification for this selection, including any relevant performance considerations from the emails and the RFP."
+        },
+      {
+        "title": "Identify Gaps in Proposals",
+        "prompt": "Review proposals and provide a gap analysis of missing sections that are required by the tender scoring matrix standards and the RFP.  Also look for incomplete responses in the Proposal that require more elaboration and what is required specifically."
+      },
+      {
+        "title": "Summarize Report",
+        "prompt": "Provide a concise summary of the uploaded report, highlighting the most important findings and conclusions."
+      }
+    ],
+    "recommended_prompts": {
+      "results_based": [
+        {
+          "result_contains": "financial",
+          "prompts": [
+            {
+              "title": "Analyze Financials",
+              "prompt": "Based on the financial data provided, analyze the overall performance and suggest any areas for improvement."
+            },
+            {
+              "title": "Review Budget",
+              "prompt": "Review the proposed budget, identify potential risks, and suggest improvements to optimize cost efficiency."
+            }
+          ]
+        },
+        {
+          "result_contains": "summary",
+          "prompts": [
+            {
+              "title": "Detailed Analysis",
+              "prompt": "Based on the provided summary, please conduct a deeper analysis of the most critical findings."
+            },
+            {
+              "title": "Next Steps",
+              "prompt": "Based on the summary, what should be the logical next steps for the team or project?"
+            }
+          ]
+        },
+        {
+          "result_contains": "compliance",
+          "prompts": [
+            {
+              "title": "Compliance Check",
+              "prompt": "Review the document to ensure that it adheres to all relevant regulatory requirements and guidelines."
+            },
+            {
+              "title": "Highlight Risks",
+              "prompt": "Identify any potential compliance risks that may arise from the current proposal."
+            }
+          ]
+        }
+      ],
+      "manual_prompts": [
+        {
+          "title": "Clarification Request",
+          "prompt": "What additional information or clarification do you require to proceed with the task?"
+        },
+        {
+          "title": "Ask for Missing Data",
+          "prompt": "What data points are missing from the document that would help in a more thorough analysis?"
+        }
+      ],
+      "most_requested_prompts": [
+        {
+          "title": "Rephrase Response",
+          "prompt": "Rephrase the provided response in simpler terms for better clarity."
+        },
+        {
+          "title": "Generate Summary",
+          "prompt": "Provide a short summary of the overall conversation or report up until this point."
+        }
+      ]
+    }
+  }
+  

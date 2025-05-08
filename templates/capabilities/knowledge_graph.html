@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI - Knowledge Graph Viewer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="../../static/css/main.css">
+    <link rel="stylesheet" href="../../static/css/chat.css">
+    <link rel="stylesheet" href="../../static/css/knowledge-graph.css">
+</head>
+
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar navbar-expand-lg mx-0 px-3 bg-white shadow-sm">
+        <a class="navbar-brand" href="/">
+            <img src="../../static/Images/PlanBLogo.jpeg" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link " href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/capabilities">Capabilities</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/use-cases">Use Cases</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Industry Specific</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+              </ul>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <div class="container prompt-section">
+        <div class="col-12 h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="row flex-row">
+                    <h1 class="text-center lh-sm mb-5">Knowledge Graph Viewer</h1>
+                    <div class="col">
+                        <div id="promptSection">
+                            <div class="prompt-box mb-5 justify-content-center">
+                                <div class="w-100">
+                                    <div class="d-flex align-items-end gap-2 input-wrapper py-6 pe-6 ps-3">
+                                        <div class="flex-1 overflow-x-auto">
+                                            <p class="flex-1" id="promptTextarea" contenteditable="true"
+                                                data-placeholder="What's on your mind?.."></p>
+                                        </div>
+                                        <button class="send-icon-wrapper rounded-circle border-0 fade" id="sendBtn">
+                                            <img src="../../static/images/send.png">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2 justify-content-between">
+                                <div class="mx-auto">
+                                   With Knowledge Graph
+                                </div>
+                                <div class="mx-auto">
+                                   Without Knowledge Graph
+                                </div>
+                            </div>
+                            <div  id="response" class="d-flex justify-content-between">
+                                <div id="response1" class="response">
+                                    <div id="promptResult1">Response will appear here...</div>
+                                </div>
+                                <div id="response2" class="response">
+                                    <div id="promptResult2">Response will appear here...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <div id="viz"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section start -->
+    <footer class="bg-white">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="fs-16">© 2024 GenAI Demo Application. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer section end -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+        integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.4.4/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <script src="{{ url_for('static', filename='js/neovis.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/knowledge_graph.js') }}"></script>
+</body>
+
+</html>

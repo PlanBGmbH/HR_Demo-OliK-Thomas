@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenAI - User Configuration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="../../static/css/main.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .guardrail-section {
+      max-width: 70%;
+    }
+
+    .guardrail-column {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      padding: 36px 30px;
+      margin-right: 20px;
+    }
+
+    .topics-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .topics-list {
+      flex: 1;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .topics-list h5 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .topics-list input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ced4da;
+    }
+
+    .topics-list button {
+      width: 100%;
+      background-color: #5661f6;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+      border: 1px solid transparent;
+    }
+
+    .topics-list button:hover {
+      background-color: transparent;
+      border-color: #5661f6;
+      color: #5661f6;
+    }
+
+    #valid-topics-list,
+    #invalid-topics-list {
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      padding: 10px;
+      background-color: #ffffff;
+      margin-top: 10px;
+    }
+    .center-content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container-class{
+      display: flex;
+      justify-content: center;
+    }
+    .topic-list-div {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4px;
+    }
+    .topic-list-div button{
+      width: 60px !important;
+      padding: 0 !important
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg mx-0 px-3 bg-white shadow-sm">
+    <a class="navbar-brand" href="/">
+      <img src="../../static/images/PlanBLogo.jpeg" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/use-cases">Use Cases</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <div class="container py-100 guardrail-section">
+    <div class="row h-100 container-class">
+      <div class="col-md-8 guardrail-column">
+        <h4 class="mb-4 fw-bold">GuardRails Configuration Page</h4>
+        
+        <!-- User Role Selector -->
+        <div class="mb-3">
+          <label for="userRole" class="form-label">Select User Role:</label>
+          <select class="form-select" id="userRole">
+            <option value="technical">Technical Department</option>
+            <option value="non-technical">Procurement Department</option>
+          </select>
+        </div>
+
+        <div class="topics-container">
+          <div class="topics-list">
+            <h5>Valid Topics</h5>
+            <input type="text" id="valid-topic" placeholder="Enter valid topic">
+            <button onclick="addValidTopic()">Add</button>
+            <div id="valid-topics-list"></div>
+          </div>
+          <div class="topics-list">
+            <h5>Invalid Topics</h5>
+            <input type="text" id="invalid-topic" placeholder="Enter invalid topic">
+            <button onclick="addInvalidTopic()">Add</button>
+            <div id="invalid-topics-list"></div>
+          </div>
+        </div>
+        <div class="center-content">
+          <button class="mt-4 btn btn-primary" onclick="submitTopics()">Submit Topics</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer section start -->
+  <footer class="bg-white">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="fs-16">© 2024 GenAI Demo Application. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section end -->
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+    let validTopics = [];
+    let invalidTopics = [];
+  
+    document.addEventListener('DOMContentLoaded', function () {
+      const userRole = document.getElementById('userRole').value;
+      loadSavedTopics(userRole);
+    });
+  
+    document.getElementById('userRole').addEventListener('change', function () {
+      const userRole = this.value;
+      loadSavedTopics(userRole);
+    });
+  
+    function loadSavedTopics(userRole) {
+      fetch('/get-saved-topics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ userRole: userRole })
+      })
+        .then(response => response.json())
+        .then(data => {
+          validTopics = data.validTopics;
+          invalidTopics = data.invalidTopics;
+          updateValidTopicsList();
+          updateInvalidTopicsList();
+        });
+    }
+  
+    function addValidTopic() {
+      const topic = document.getElementById('valid-topic').value;
+      document.getElementById('valid-topic').value = '';
+      if (topic && !validTopics.includes(topic)) {
+        validTopics.push(topic);
+        updateValidTopicsList();
+      }
+    }
+  
+    function addInvalidTopic() {
+      const topic = document.getElementById('invalid-topic').value;
+      document.getElementById('invalid-topic').value = '';
+      if (topic && !invalidTopics.includes(topic)) {
+        invalidTopics.push(topic);
+        updateInvalidTopicsList();
+      }
+    }
+  
+    function updateValidTopicsList() {
+      const container = document.getElementById('valid-topics-list');
+      container.innerHTML = '';
+      validTopics.forEach(topic => {
+        const div = document.createElement('div');
+        div.classList.add('topic-list-div');
+        div.textContent = topic;
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = () => deleteTopic(topic, 'valid');
+        div.appendChild(deleteButton);
+        container.appendChild(div);
+      });
+    }
+  
+    function updateInvalidTopicsList() {
+      const container = document.getElementById('invalid-topics-list');
+      container.innerHTML = '';
+      invalidTopics.forEach(topic => {
+        const div = document.createElement('div');
+        div.classList.add('topic-list-div');
+        div.textContent = topic;
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = () => deleteTopic(topic, 'invalid');
+        div.appendChild(deleteButton);
+        container.appendChild(div);
+      });
+    }
+  
+    function deleteTopic(topic, topicType) {
+      const userRole = document.getElementById('userRole').value;
+  
+      fetch('/delete-topic', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          userRole: userRole,
+          topic: topic,
+          topicType: topicType
+        })
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            if (topicType === 'valid') {
+              validTopics = validTopics.filter(t => t !== topic);
+              updateValidTopicsList();
+            } else {
+              invalidTopics = invalidTopics.filter(t => t !== topic);
+              updateInvalidTopicsList();
+            }
+          } else {
+            alert('Error deleting topic.');
+          }
+        });
+    }
+  
+    function submitTopics() {
+      const userRole = document.getElementById('userRole').value;
+      const payload = {
+        userRole: userRole,
+        validTopics: validTopics,
+        invalidTopics: invalidTopics
+      };
+  
+      fetch('/save-topics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            alert('Topics saved successfully!');
+          } else {
+            alert('Error saving topics.');
+          }
+        });
+    }
+  
+  </script>
+  
+</body>
+
+</html>

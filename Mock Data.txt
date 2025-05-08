@@ -1,0 +1,402 @@
+[
+  {
+    "employee_id": "PB001",
+    "name": "Oliver Kiesslich",
+    "position": "Software Engineer",
+    "department": "IT",
+    "salary": {
+      "basic_salary": 50000,
+      "housing_allowance": 10000,
+      "mobile_allowance": 2000,
+      "currency": "EUR",
+      "benefits": {
+        "health_insurance": true,
+        "pension_contribution": 10
+      },
+      "last_payment_date": "2024-10-31",
+      "total_paid_ytd": 65000
+    },
+    "performance": {
+      "last_review_date": "2024-09-01",
+      "rating": "Excellent",
+      "next_review_due": "2025-03-01",
+      "goals_met": ["Project delivery on time", "Reduced code defects"]
+    },
+    "training": {
+      "completed_courses": ["Advanced Python", "Cybersecurity Basics"],
+      "upcoming_courses": ["AI & Machine Learning"],
+      "training_budget_used": 1200,
+      "training_budget_remaining": 1800
+    },
+    "leave": {
+      "leave_allotment": 30,
+      "leave_taken": 10,
+      "leave_balance": 20,
+      "leave_types": {
+        "annual_leave": 10,
+        "maternity_leave": 0,
+        "bereavement_leave": 2
+      }
+    }
+  },
+  {
+    "employee_id": "PB002",
+    "name": "Emily Taylor",
+    "position": "HR Manager",
+    "department": "Human Resources",
+    "salary": {
+      "basic_salary": 60000,
+      "housing_allowance": 12000,
+      "mobile_allowance": 2500,
+      "currency": "EUR",
+      "benefits": {
+        "health_insurance": true,
+        "pension_contribution": 10
+      },
+      "last_payment_date": "2024-10-31",
+      "total_paid_ytd": 78000
+    },
+    "performance": {
+      "last_review_date": "2024-07-15",
+      "rating": "Good",
+      "next_review_due": "2025-01-15",
+      "goals_met": ["Improved employee engagement", "Streamlined onboarding process"]
+    },
+    "training": {
+      "completed_courses": ["Leadership Training", "Employee Law"],
+      "upcoming_courses": ["Workplace Diversity"],
+      "training_budget_used": 1000,
+      "training_budget_remaining": 2000
+    },
+    "leave": {
+      "leave_allotment": 30,
+      "leave_taken": 8,
+      "leave_balance": 22,
+      "leave_types": {
+        "annual_leave": 8,
+        "maternity_leave": 0,
+        "bereavement_leave": 1
+      }
+    }
+  },
+  {
+    "employee_id": "PB003",
+    "name": "Florian Schmid",
+    "position": "Marketing Specialist",
+    "department": "Marketing",
+    "salary": {
+      "basic_salary": 48000,
+      "housing_allowance": 9000,
+      "mobile_allowance": 1500,
+      "currency": "EUR",
+      "benefits": {
+        "health_insurance": true,
+        "pension_contribution": 10
+      },
+      "last_payment_date": "2024-10-31",
+      "total_paid_ytd": 63000
+    },
+    "performance": {
+      "last_review_date": "2024-08-20",
+      "rating": "Very Good",
+      "next_review_due": "2025-02-20",
+      "goals_met": ["Increased social media presence", "Successful campaign launches"]
+    },
+    "training": {
+      "completed_courses": ["Digital Marketing", "SEO Strategies"],
+      "upcoming_courses": ["Advanced Branding Techniques"],
+      "training_budget_used": 900,
+      "training_budget_remaining": 2100
+    },
+    "leave": {
+      "leave_allotment": 30,
+      "leave_taken": 12,
+      "leave_balance": 18,
+      "leave_types": {
+        "annual_leave": 12,
+        "maternity_leave": 0,
+        "bereavement_leave": 1
+      }
+    }
+  },
+  {
+    "employee_id": "PB004",
+    "name": "James Johnson",
+    "position": "Financial Analyst",
+    "department": "Finance",
+    "salary": {
+      "basic_salary": 70000,
+      "housing_allowance": 15000,
+      "mobile_allowance": 3000,
+      "currency": "EUR",
+      "benefits": {
+        "health_insurance": true,
+        "pension_contribution": 10
+      },
+      "last_payment_date": "2024-10-31",
+      "total_paid_ytd": 95000
+    },
+    "performance": {
+      "last_review_date": "2024-06-10",
+      "rating": "Outstanding",
+      "next_review_due": "2024-12-10",
+      "goals_met": ["Improved budget forecasting", "Identified cost-saving opportunities"]
+    },
+    "training": {
+      "completed_courses": ["Financial Risk Management", "Advanced Excel"],
+      "upcoming_courses": ["Investment Analysis"],
+      "training_budget_used": 1500,
+      "training_budget_remaining": 1500
+    },
+    "leave": {
+      "leave_allotment": 30,
+      "leave_taken": 5,
+      "leave_balance": 25,
+      "leave_types": {
+        "annual_leave": 5,
+        "maternity_leave": 0,
+        "bereavement_leave": 0
+      }
+    }
+  },
+  {
+    "employee_id": "PB005",
+    "name": "Marco Bielesch",
+    "position": "Project Manager",
+    "department": "Operations",
+    "salary": {
+      "basic_salary": 65000,
+      "housing_allowance": 13000,
+      "mobile_allowance": 2500,
+      "currency": "EUR",
+      "benefits": {
+        "health_insurance": true,
+        "pension_contribution": 10
+      },
+      "last_payment_date": "2024-10-31",
+      "total_paid_ytd": 85000
+    },
+    "performance": {
+      "last_review_date": "2024-05-05",
+      "rating": "Good",
+      "next_review_due": "2024-11-05",
+      "goals_met": ["Timely project completion", "Enhanced project scope management"]
+    },
+    "training": {
+      "completed_courses": ["Agile Project Management", "Stakeholder Communication"],
+      "upcoming_courses": ["Resource Management"],
+      "training_budget_used": 1100,
+      "training_budget_remaining": 1900
+    },
+    "leave": {
+      "leave_allotment": 30,
+      "leave_taken": 7,
+      "leave_balance": 23,
+      "leave_types": {
+        "annual_leave": 7,
+        "maternity_leave": 0,
+        "bereavement_leave": 1
+      }
+    }
+  },
+  {
+    "employee_id": "PB006",
+    "name": "Sarah Anderson",
+    "position": "Customer Support Specialist",
+    "department": "Customer Service",
+    "salary": {
+      "basic_salary": 40000,
+      "housing_allowance": 8000,
+      "mobile_allowance": 1500,
+      "currency": "EUR",
+      "benefits": {
+        "health_insurance": true,
+        "pension_contribution": 10
+      },
+      "last_payment_date": "2024-10-31",
+      "total_paid_ytd": 55000
+    },
+    "performance": {
+      "last_review_date": "2024-03-15",
+      "rating": "Good",
+      "next_review_due": "2024-09-15",
+      "goals_met": ["High customer satisfaction scores", "Reduced response times"]
+    },
+    "training": {
+      "completed_courses": ["Customer Service Excellence"],
+      "upcoming_courses": ["Advanced Conflict Resolution"],
+      "training_budget_used": 600,
+      "training_budget_remaining": 2400
+    },
+    "leave": {
+      "leave_allotment": 30,
+      "leave_taken": 9,
+      "leave_balance": 21,
+      "leave_types": {
+        "annual_leave": 9,
+        "maternity_leave": 0,
+        "bereavement_leave": 2
+      }
+    }
+  },
+  {
+    "employee_id": "PB007",
+    "name": "Leon Fischer",
+    "position": "Data Analyst",
+    "department": "Data Science",
+    "salary": {
+      "basic_salary": 55000,
+      "housing_allowance": 11000,
+      "mobile_allowance": 2200,
+      "currency": "EUR",
+      "benefits": {
+        "health_insurance": true,
+        "pension_contribution": 10
+      },
+      "last_payment_date": "2024-10-31",
+      "total_paid_ytd": 70000
+    },
+    "performance": {
+      "last_review_date": "2024-04-20",
+      "rating": "Very Good",
+      "next_review_due": "2024-10-20",
+      "goals_met": ["Improved data visualization", "Enhanced data models"]
+    },
+    "training": {
+      "completed_courses": ["Data Visualization with Python"],
+      "upcoming_courses": ["Big Data Analysis"],
+      "training_budget_used": 1100,
+      "training_budget_remaining": 1900
+    },
+    "leave": {
+      "leave_allotment": 30,
+      "leave_taken": 10,
+      "leave_balance": 20,
+      "leave_types": {
+        "annual_leave": 10,
+        "maternity_leave": 0,
+        "bereavement_leave": 1
+      }
+    }
+  },
+  {
+    "employee_id": "PB008",
+    "name": "Jessica Clark",
+    "position": "Sales Executive",
+    "department": "Sales",
+    "salary": {
+      "basic_salary": 45000,
+      "housing_allowance": 9000,
+      "mobile_allowance": 1800,
+      "currency": "EUR",
+      "benefits": {
+        "health_insurance": true,
+        "pension_contribution": 10
+      },
+      "last_payment_date": "2024-10-31",
+      "total_paid_ytd": 60000
+    },
+    "performance": {
+      "last_review_date": "2024-06-01",
+      "rating": "Good",
+      "next_review_due": "2024-12-01",
+      "goals_met": ["Exceeded sales targets", "Expanded client base"]
+    },
+    "training": {
+      "completed_courses": ["Sales Strategy Basics"],
+      "upcoming_courses": ["Negotiation Techniques"],
+      "training_budget_used": 800,
+      "training_budget_remaining": 2200
+    },
+    "leave": {
+      "leave_allotment": 30,
+      "leave_taken": 11,
+      "leave_balance": 19,
+      "leave_types": {
+        "annual_leave": 11,
+        "maternity_leave": 0,
+        "bereavement_leave": 1
+      }
+    }
+  },
+  {
+    "employee_id": "PB009",
+    "name": "Aditya Kolluru",
+    "position": "IT Support Technician",
+    "department": "IT",
+    "salary": {
+      "basic_salary": 42000,
+      "housing_allowance": 8500,
+      "mobile_allowance": 1600,
+      "currency": "EUR",
+      "benefits": {
+        "health_insurance": true,
+        "pension_contribution": 10
+      },
+      "last_payment_date": "2024-10-31",
+      "total_paid_ytd": 58000
+    },
+    "performance": {
+      "last_review_date": "2024-05-25",
+      "rating": "Satisfactory",
+      "next_review_due": "2024-11-25",
+      "goals_met": ["Resolved high-priority tickets", "Improved response time"]
+    },
+    "training": {
+      "completed_courses": ["Network Troubleshooting"],
+      "upcoming_courses": ["Advanced System Administration"],
+      "training_budget_used": 700,
+      "training_budget_remaining": 2300
+    },
+    "leave": {
+      "leave_allotment": 30,
+      "leave_taken": 6,
+      "leave_balance": 24,
+      "leave_types": {
+        "annual_leave": 6,
+        "maternity_leave": 0,
+        "bereavement_leave": 2
+      }
+    }
+  },
+  {
+    "employee_id": "PB010",
+    "name": "Greta Becker",
+    "position": "Research Scientist",
+    "department": "R&D",
+    "salary": {
+      "basic_salary": 75000,
+      "housing_allowance": 16000,
+      "mobile_allowance": 3000,
+      "currency": "EUR",
+      "benefits": {
+        "health_insurance": true,
+        "pension_contribution": 10
+      },
+      "last_payment_date": "2024-10-31",
+      "total_paid_ytd": 104000
+    },
+    "performance": {
+      "last_review_date": "2024-02-01",
+      "rating": "Excellent",
+      "next_review_due": "2024-08-01",
+      "goals_met": ["Published research papers", "Secured project grants"]
+    },
+    "training": {
+      "completed_courses": ["Advanced Data Analysis", "Lab Safety"],
+      "upcoming_courses": ["AI in Research"],
+      "training_budget_used": 1600,
+      "training_budget_remaining": 1400
+    },
+    "leave": {
+      "leave_allotment": 30,
+      "leave_taken": 4,
+      "leave_balance": 26,
+      "leave_types": {
+        "annual_leave": 4,
+        "maternity_leave": 0,
+        "bereavement_leave": 0
+      }
+    }
+  }
+]

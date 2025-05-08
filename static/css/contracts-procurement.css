@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* body {
+  background-color: #f3f7fb;
+} */
+
+.chatbot-section {
+  height: calc(100vh - 74px);
+  max-width: 850px;
+}
+
+.input-wrapper {
+  background-color: #fff;
+  border-radius: 35px;
+  max-width: 760px;
+  margin: auto;
+  padding-right: 6px;
+  box-shadow: 0 5px 10px 0 #1212122e;
+}
+
+.input-wrapper .icon-wrapper span,
+.input-wrapper .icon-wrapper i {
+  vertical-align: bottom;
+  font-size: 24px;
+}
+
+.input-wrapper p#promptTextarea {
+  font-size: 16px;
+  color: #404040;
+  max-height: 25dvh;
+  overflow-y: auto;
+  outline: none;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin: 12px 0;
+}
+
+.input-wrapper p#promptTextarea::after {
+  content: attr(data-placeholder);
+  cursor: text;
+  pointer-events: none;
+  color: #999999;
+  font-size: 14px;
+}
+
+.input-wrapper p#promptTextarea.focusing::after {
+  content: none;
+}
+
+
+.input-wrapper .send-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  background-color: #e75805;
+  box-shadow: -2px 4px 10px 2px #dbddfd
+}
+
+.uploaded-file {
+  max-width: 320px;
+  padding: 8px;
+  /* background-color: #b1b6f8; */
+  background-color: #f5f6ff;
+  border: 1px solid #4f60e41a;
+  border-radius: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#queries .uploaded-file {
+  margin: 0;
+}
+
+.uploaded-file .img-wrapper {
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.uploaded-file .file-meta .file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  max-width: 185px;
+  font-weight: bold;
+}
+
+.uploaded-file .file-meta .file-format {
+  font-size: 14px;
+}
+
+
+.uploaded-file .loader {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 22%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px solid #514b82;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
+}
+
+@keyframes l20-1 {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%)
+  }
+
+  12.5% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%)
+  }
+
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%)
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)
+  }
+
+  62.5% {
+    clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)
+  }
+
+  75% {
+    clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%)
+  }
+
+  100% {
+    clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%)
+  }
+}
+
+@keyframes l20-2 {
+  0% {
+    transform: scaleY(1) rotate(0deg)
+  }
+
+  49.99% {
+    transform: scaleY(1) rotate(135deg)
+  }
+
+  50% {
+    transform: scaleY(-1) rotate(0deg)
+  }
+
+  100% {
+    transform: scaleY(-1) rotate(-135deg)
+  }
+}
+
+.queries-wrapper .user-account-img,
+.response-wrapper .user-account-img {
+  min-width: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.queries-wrapper #queries {
+  padding: 10px 20px;
+  background-color: #e9ecef;
+  border-radius: 24px;
+  max-width: 70%;
+}
+
+#response h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#response h2 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#response h3 {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#response h4 {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#response p {
+  font-size: 16px;
+}
+
+
+#response table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+#response th, #response td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: top;
+}
+#response th {
+  background-color: #f4f4f4;
+}
+
+
+.response-wrapper #response {
+  padding: 10px 20px;
+}
+
+.queries-wrapper #queries .query-text,
+.response-wrapper #response p {
+  font-size: 16px;
+  line-height: 1.5rem;
+  word-break: break-word;
+}
+
+.additional-options .btns-wrapper {
+  background-color: #f9fbfd;
+  padding: 10px 12px;
+  border-radius: 35px;
+}
+
+.additional-options .btns-wrapper .btn {
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 0;
+  border-right: 2px solid #8c8d8e;
+  border-radius: 0;
+  display: flex;
+}
+
+.additional-options .btns-wrapper .img-wrapper {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.additional-options .btns-wrapper .btn svg,
+.additional-options .btns-wrapper .btn span {
+  color: #8c8d8e;
+  transition: all 0.25s ease;
+}
+
+.additional-options .btns-wrapper .btn:hover svg,
+.additional-options .btns-wrapper .btn:hover span {
+  color: #7064ff;
+}
+.responding {
+  width: 34px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  background:
+    var(--_g) 0% 50%,
+    var(--_g) 50% 50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%
+  }
+
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%
+  }
+
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%
+  }
+
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%
+  }
+}
+
+.preview-screen .card {
+  background-color: #e5e8ff7a;
+  align-items: center;
+}
+
+.preview-screen .card .img-wrapper {
+  width: 40px;
+  height: 40px;
+}
+#promptTextarea[dir="rtl"] {
+  font-family: "Amiri", serif;
+}
+.query-text[dir="rtl"] {
+  font-family: "Amiri", serif;
+}
+.response-wrapper[dir="rtl"] {
+  font-family: "Amiri", serif;
+}
+.response-wrapper[dir="rtl"] .additional-options .btns-wrapper .btn:first-child,.response-wrapper[dir="rtl"] .additional-options .btns-wrapper .btn:nth-child(2) {
+  padding-right: 0 !important;
+  border-right: 0;
+  padding-left: 12px !important;
+}
+
+.response-wrapper[dir="rtl"] .additional-options .btns-wrapper .btn:nth-child(3) {
+  border-left: 2px solid #8c8d8e;
+}
+
+.response-wrapper[dir="rtl"] .additional-options .btns-wrapper .btn:last-child {
+  padding-left: 0;
+  padding-right: 12px !important;
+}
+
+.response-wrapper[dir="rtl"]  #response h1 {
+  font-size: 20px;
+  line-height: 1.5rem;
+}
+
+.response-wrapper[dir="rtl"]  #response h2 {
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+.response-wrapper[dir="rtl"]  #response h3 {
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+.response-wrapper[dir="rtl"]  #response th, .response-wrapper[dir="rtl"] #response td, .response-wrapper[dir="rtl"] #response th, .response-wrapper[dir="rtl"] #response li  {
+  line-height: 2rem;
+}
+
+#chatLang {
+  max-width: 70px;
+}
+
+#response p img {
+  max-width: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Recommended prompt buttons */
+
+.recommended-prompts-container {
+  display: flex;
+  justify-content: center;  /* Horizontally centers the buttons */
+  flex-wrap: wrap;          /* Allows buttons to wrap if there's not enough space */
+  gap: 15px;                /* Adds space between buttons */
+  margin-bottom: 20px;      /* Adds space below the container */
+  padding: 10px;
+}
+
+.recommended-prompts-container .btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Hover state */
+.recommended-prompts-container .btn:hover {
+  background-color: #e75805;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 91, 187, 0.3);
+}
+
+/* Different color for important prompts */
+.recommended-prompts-container .btn-important {
+  background-color: #28a745;  /* Green for important prompts */
+  border-color: #28a745;
+}
+
+.recommended-prompts-container .btn-important:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* Disabled state */
+.recommended-prompts-container .btn:disabled {
+  background-color: #e75805;
+  color: white;
+  cursor: not-allowed;
+}
+
+.recommended-prompts-container .btn:focus {
+  outline: 2px solid #e75805;  /* Outline for focused state */
+  outline-offset: 2px;
+}
+
+.hidden-query {
+  display: none;
+}
+
+.d-none {
+  display: none;
+}
+
+/* Initial prompts container - centering buttons */
+.initial-prompts-container {
+  display: flex;
+  justify-content: center;  /* Horizontally centers the buttons */
+  flex-wrap: wrap;          /* Allows buttons to wrap if there's not enough space */
+  gap: 15px;                /* Adds space between buttons */
+  margin-bottom: 20px;      /* Adds space below the container */
+  padding: 10px;
+}
+
+/* Button styling for initial prompts */
+.initial-prompts-container .btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+.initial-prompts-container .btn:hover {
+  background-color: #e75805;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 91, 187, 0.3);
+}

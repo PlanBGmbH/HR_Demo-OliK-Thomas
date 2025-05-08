@@ -1,0 +1,9 @@
+.explore-section .card {
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
+}
+
+.explore-section .card-wrapper:hover .card {
+  background-color: #e5e8ff;
+  box-shadow: 0 5px 10px 0 #e5e8ff;
+}

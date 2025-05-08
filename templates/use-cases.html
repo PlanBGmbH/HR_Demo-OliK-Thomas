@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Cases - GenAI Demo Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="static/css/main.css">
+    <style>
+        /* Use Cases and Components Grid */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center; /* This centers the grid items */
+        }
+
+        .use-case {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding-bottom: 20px;
+        }
+
+        .use-case:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .use-case img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .use-case a {
+            text-decoration: none;
+            color: #00473E;
+        }
+
+        .use-case a:hover {
+            color: #A020F0;
+        }
+
+        .use-case h3 {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        /* Ensure footer is at the bottom */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg mx-0 px-3 bg-white shadow-sm">
+            <a class="navbar-brand" href="/">
+              <img src="../../static/images/PlanBLogo.jpeg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link " href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/use-cases">Use Cases</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+
+        <div class="container py-100 content">
+            <section>
+                <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto text-center pb-5">
+                    <h2 class="mb-3">Explore GenAI Use Cases</h2>
+                    <p>Select a use case below to see how GenAI can transform your business operations.</p>
+                </div>
+                
+                <div class="use-cases-grid">
+                    <div class="use-case">
+                        <a href="use-cases/contracts-procurement">
+                            <img src="../static/images/contract-management.png" alt="Contracts & Procurement">
+                            <h3>Contracts & Procurement</h3>
+                        </a>
+                    </div>
+                    <div class="use-case">
+                        <a href="/capabilities/multimodal">
+                            <img src="static/images/imagecomparison.png" alt="Image Comparison and Scope Analysis">
+                            <h3>Image Comparison and Scope Analysis</h3>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- footer section start -->
+        <footer class="bg-white">
+            <div class="container py-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                <p class="fs-16">© 2024 GenAI Demo Application. All rights reserved.</p>
+                </div>
+            </div>
+            </div>
+        </footer>
+        <!-- footer section end -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+
+</body>
+</html>
